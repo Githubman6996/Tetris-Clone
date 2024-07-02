@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tetris</title>
+        
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="index.js" type="module" defer></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Anta');
+        /*https://fonts.google.com/specimen/Anta*/
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: Anta;
+            }
+            body {
+                background: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .tetrisWrapper {
+                display: grid;
+                place-items: center;
+                width: 100vw;
+                height: 100vh;
+            }
+            .tetris {
+                display: flex;
+                gap: 10px;
+            }
+            .tetris > canvas {
+                align-self: flex-start;
+            }
+            .score {
+                color: white;
+                text-align: center;
+            }
+            .gameWrapper {
+                background: linear-gradient(0deg, rgba(255,255,255,1) 50%, rgba(0,0,0,1) 100%);
+                height: min-content;
+            }
+            #game {
+                background: black;
+                mix-blend-mode: multiply;
+            }
+            .sideCanvas {
+                position: absolute;
+                top: 0;
+                mix-blend-mode: multiply;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="app"></div>
+    </body>
+</html>
